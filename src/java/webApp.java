@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.*;
 
 @WebServlet(urlPatterns = {"/webApp"})
 public class webApp extends HttpServlet {
@@ -13,16 +14,9 @@ public class webApp extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet webApp</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>hello everyone </h1>" + (10 - 20));
-            out.println("</body>");
-            out.println("</html>");
+            out.print("I am Rudresh Sankpal");
+            RequestDispatcher rd = request.getRequestDispatcher("design.html");
+            rd.forward(request, response);
         }
     }
 
