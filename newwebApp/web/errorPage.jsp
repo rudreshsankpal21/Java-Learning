@@ -13,7 +13,7 @@
     </head>
     <body>
         <%
-            out.print("Error");
+            out.print("Error"); 
         %>
     </body>
 </html>
