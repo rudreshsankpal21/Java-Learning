@@ -32,9 +32,9 @@ public class page3 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-         HttpSession hs = request.getSession(false);
-         String s = (String) hs.getAttribute("name");
-         out.print(s);
+        HttpSession hs = request.getSession(false);
+        String str = (String) hs.getAttribute("name");
+        out.print(str);
         }
     }
 

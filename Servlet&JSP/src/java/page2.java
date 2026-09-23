@@ -33,10 +33,10 @@ public class page2 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String str = request.getParameter("name");
-          HttpSession hs = request.getSession();
-          hs.setAttribute("name", str);
-          out.print("<a href=page3> Visit next page</a>");
+            String name = request.getParameter("name");
+            HttpSession hs = request.getSession();
+            hs.setAttribute("name", name);
+            out.print("<a href=page3>visit next page</a>");
         }
     }
 
