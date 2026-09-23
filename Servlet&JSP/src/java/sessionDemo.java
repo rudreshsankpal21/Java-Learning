@@ -34,12 +34,12 @@ public class sessionDemo extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-         HttpSession hs = request.getSession();
-         hs.setAttribute("fname", "rudresh");
-         String x = (String) hs.getAttribute("fname");
-         out.print("Fname from session : " + x);
-         String sid = hs.getId();
-         out.print("<br>ID from session : " + sid);
+        HttpSession hs = request.getSession();
+        hs.setAttribute("name", "rudresh");
+        String x = (String) hs.getAttribute("name");
+        out.print("Name via session : "+x);
+        String id = hs.getId();
+        out.print("ID via session : "+id);
          
         }
     }
