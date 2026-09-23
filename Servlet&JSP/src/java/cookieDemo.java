@@ -34,9 +34,9 @@ public class cookieDemo extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           Cookie ck = new Cookie("bcs", "Hello");
-           ck.setMaxAge(10);
-           response.addCookie(ck);
+           Cookie ck = new Cookie("cookie", "abcd");
+           ck.setMaxAge(3);
+          response.addCookie(ck);
         }
     }
 
